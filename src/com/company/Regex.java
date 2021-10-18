@@ -8,6 +8,7 @@ public class Regex {
     public static void main(String[] args) {
 
         System.out.println("Entering Details");
+
         /*
         First name entered
          */
@@ -16,12 +17,14 @@ public class Regex {
         System.out.println("Enter First name -> ");
         String firstName = sc.next();
         Matcher matcher = pattern.matcher(firstName);
-/*
-Last name added
- */
+
+        /*
+        Last name added
+        */
         System.out.println("Enter Last name -> ");
         String lastName = sc.next();
         Matcher matcher2 = pattern.matcher(lastName);
+
         /*
         Adding Email
          */
@@ -29,10 +32,16 @@ Last name added
         System.out.println("Enter email -> ");
         String eMail = sc.next();
         Matcher matcher3 = pattern1.matcher(eMail);
+        
+        /*
+        Adding mobile number
+         */
+        Pattern pattern2 = Pattern.compile("^[0\\+91][6789][0-9]{9,13}");
+        System.out.println("Enter the Number -> ");
+        String mobNumber = sc.next();
+        Matcher matcher4 = pattern2.matcher(mobNumber);
 
-
-        if (matcher.find() && matcher2.find() && matcher3.find())
-//        if (matcher3.find())
+        if (matcher.find() && matcher2.find() && matcher3.find() && matcher4.find())
             System.out.println("Details Matched");
         else
             System.out.println("Details not matched");
