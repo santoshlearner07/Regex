@@ -5,6 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class Regex {
+
     public static void main(String[] args) {
 
         System.out.println("Entering Details");
@@ -37,14 +38,22 @@ public class Regex {
         Adding mobile number
          */
         Pattern pattern2 = Pattern.compile("^[0\\+91][6789][0-9]{9,13}");
-        System.out.println("Enter the Number -> ");
+        System.out.println("Enter the Mobile number -> ");
         String mobNumber = sc.next();
         Matcher matcher4 = pattern2.matcher(mobNumber);
 
+        /*
+        Create password
+         */
+        Pattern pattern3 = Pattern.compile("[a-z]{8}");
+        System.out.println("Enter the password -> ");
+        String passWord = sc.next();
+        Matcher matcher5 = pattern3.matcher(passWord);
+
         if (matcher.find() && matcher2.find() && matcher3.find() && matcher4.find())
-            System.out.println("Details Matched");
+        System.out.println("Details Matched");
         else
-            System.out.println("Details not matched");
+        System.out.println("Details not matched");
 
 
     }
