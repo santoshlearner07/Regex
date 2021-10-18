@@ -45,7 +45,7 @@ public class Regex {
 //        /*
 //        Create password
 //         */
-        Pattern pattern3 = Pattern.compile("[A-Z]{1}[0-9]{1}[a-z]{6}");
+        Pattern pattern3 = Pattern.compile("[A-Z]{1}[0-9]{1}[~!@#$%^&*()<>,.=`]{1}[a-z]{5}");
         System.out.println("Enter the password -> ");
         String passWord = sc.next();
         Matcher matcher5 = pattern3.matcher(passWord);
