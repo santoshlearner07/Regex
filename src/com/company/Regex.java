@@ -22,8 +22,17 @@ Last name added
         System.out.println("Enter Last name -> ");
         String lastName = sc.next();
         Matcher matcher2 = pattern.matcher(lastName);
+        /*
+        Adding Email
+         */
+        Pattern pattern1 = Pattern.compile("[a-z]{3,20}[@|.|-]?[0-9]{3,6}[@][a-z]{3,10}[.][a-z]{2,5}$");
+        System.out.println("Enter email -> ");
+        String eMail = sc.next();
+        Matcher matcher3 = pattern1.matcher(eMail);
 
-        if (matcher.find() && matcher.find())
+
+        if (matcher.find() && matcher2.find() && matcher3.find())
+//        if (matcher3.find())
             System.out.println("Details Matched");
         else
             System.out.println("Details not matched");
